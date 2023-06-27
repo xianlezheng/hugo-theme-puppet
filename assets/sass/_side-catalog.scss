@@ -27,7 +27,7 @@
   overflow: auto;
   height: 100%;
   padding-bottom: 40px;
-  width: 195px;
+  width: 230px;
   .catalog-body {
     position: relative;
     list-style: none;
@@ -52,27 +52,31 @@
         text-overflow: ellipsis;
       }
     }
-    .h1_nav,
-    .h2_nav {
+    .h1_nav{
       margin-left: 0;
+      font-size: 15px;
+      font-weight: bold; 
+    }
+    .h2_nav {
+      margin-left: 10px;
       font-size: 13px;
       font-weight: bold;
     }
     .h3_nav {
-      margin-left: 6px;
-      font-size: 13px;
+      margin-left: 20px;
+      font-size: 12px;
       font-weight: bold;
     }
     .h4_nav {
-      margin-left: 12px;
-      font-size: 12px;
+      margin-left: 25px;
+      font-size: 10px;
       a {
         max-width: 170px;
       }
     }
     .h5_nav .h6_nav {
-      margin-left: 18px;
-      font-size: 12px;
+      margin-left: 30px;
+      font-size: 10px;
       a {
         max-width: 170px;
       }
