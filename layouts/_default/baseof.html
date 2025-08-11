@@ -67,7 +67,9 @@
   <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
   <link rel="icon" href="{{ "logo.svg" | relURL }}" sizes="any" type="image/svg+xml" />
 {{ end }}
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6103091528675808" crossorigin="anonymous"></script>
+{{ if .Site.Params.adsense.publisher_id }}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ .Site.Params.adsense.publisher_id }}" crossorigin="anonymous"></script>
+{{ end }}
 </head>
 
 <!-- hack iOS CSS :active style -->
