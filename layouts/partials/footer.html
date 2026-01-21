@@ -100,6 +100,24 @@
 <script src="{{ $zoom_js.RelPermalink }}"></script>
 
 {{- if .Store.Get "hasMermaid" }}
+<style>
+  /* 只对 mindmap 节点应用黑色文字 */
+  pre.mermaid svg g.mindmap-node text,
+  pre.mermaid svg g.mindmap-node tspan,
+  pre.mermaid svg g.mindmap-node foreignObject,
+  pre.mermaid svg g.mindmap-node foreignObject * {
+    fill: #000000 !important;
+    color: #000000 !important;
+  }
+  /* mindmap 根节点保持白色 */
+  pre.mermaid svg g.section-root text,
+  pre.mermaid svg g.section-root tspan,
+  pre.mermaid svg g.section-root foreignObject,
+  pre.mermaid svg g.section-root foreignObject * {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+  }
+</style>
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
